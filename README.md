@@ -31,7 +31,7 @@ bash ~/spark-3.1.2-bin-hadoop3.2/bin/spark-submit --packages org.apache.spark:sp
 
 # what's next?
 + layers of security
-+ decide on a Kafka naming convention and stick to it
++ decide on a Kafka topic naming convention, and then:
 + prevent user created topics in Kafka:
 ```
 auto.create.topics.enabled = false

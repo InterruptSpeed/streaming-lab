@@ -5,7 +5,7 @@ Example of how to use Kafka and Spark to handle streaming submissions of urls.
 
 # local Kafka
 
-+ complete (Step 1)[https://kafka.apache.org/quickstart#quickstart_download] and (Step 2)[https://kafka.apache.org/quickstart#quickstart_startserver] of the Apache Kafka Quickstart.
++ complete [Step 1](https://kafka.apache.org/quickstart#quickstart_download) and [Step 2](https://kafka.apache.org/quickstart#quickstart_startserver) of the Apache Kafka Quickstart.
 + open another terminal and run:
 ```
 $ bin/kafka-topics.sh --create --topic inbox.urls --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
@@ -17,8 +17,8 @@ $ bin/kafka-console-producer.sh --topic inbox.urls --bootstrap-server localhost:
 
 # local Spark
 
-+ (download)[https://spark.apache.org/downloads.html] the latest release of Apache Spark, uncompress it and move the resulting directory to ~.
-+ submit (consumer.py)[consumer.py] to spark with support for Kafka and delta enabled:
++ [download](https://spark.apache.org/downloads.html) the latest release of Apache Spark, uncompress it and move the resulting directory to ~.
++ submit [consumer.py](consumer.py) to spark with support for Kafka and delta enabled:
 ```
 bash ~/spark-3.1.2-bin-hadoop3.2/bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.1.2,io.delta:delta-core_2.12:1.0.0 --conf "spark.sql.extensions=io.delta.sql.DeltaSparkSessionExtension" --conf "spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog" --conf "spark.sql.ansi.enabled=false" ./consumer.py
 ```

@@ -1,5 +1,5 @@
 # streaming-lab
-Example of how to use Kafka and Spark to handle streaming submissions of urls.
+Example of how to use [Kafka](https://kafka.apache.org/) and [Spark](https://spark.apache.org/) to handle streaming submissions of urls.
 
 # Overview
 

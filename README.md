@@ -27,7 +27,7 @@ bash ~/spark-3.1.2-bin-hadoop3.2/bin/spark-submit --packages org.apache.spark:sp
 + copy a url from your browser
 + paste it into the kafka-console-producer window and hit Enter
 + watch the spark-submit terminal window to see the results
-+ now imagine a system or browser extension submitted urls automatically instead of the manual activity we did
++ now imagine a system or browser extension submitting urls automatically instead of the manual activity we did
 
 # what's next?
 + layers of security

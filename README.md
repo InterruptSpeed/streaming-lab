@@ -30,7 +30,18 @@ bash ~/spark-3.1.2-bin-hadoop3.2/bin/spark-submit --packages org.apache.spark:sp
 + copy a url from your browser
 + paste it into the kafka-console-producer window and hit Enter
 + watch the spark-submit terminal window to see the results
-+ now imagine a system or browser extension submitting urls automatically instead of the manual activity we did
+
+# http support
++ Kafka doesn't natively speak HTTP but this example demonstrates the idea
++ open another terminal and run:
+```
+python3 http_kafka_proxy.py
+```
++ and in yet another terminal run:
+```
+curl --data "url=https://github.com/" localhost:5000/topic
+```
+
 
 # what's next?
 + layers of security

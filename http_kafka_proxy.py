@@ -1,4 +1,4 @@
-from flask import request
+from flask import request, jsonify
 import flask
 
 app = flask.Flask(__name__)
@@ -9,13 +9,16 @@ p = Producer({'bootstrap.servers': 'localhost:9092'})
 
 @app.route('/topic', methods=['POST'])
 def topic():
-    url = request.values.get('url')
+    d = request.get_json()
+    url = d.get('url')
+    if url is None:
+        return 'failure', 400
     p.produce('inbox.urls', url.encode('utf-8'))
-    return '', 200
+    return 'success', 200
 
 @app.route('/', methods=['GET'])
 def home():
-    return '', 200
+    return 'success', 200
 
 app.run()
 

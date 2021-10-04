@@ -1,7 +1,10 @@
 # streaming-lab
 Example of how to use [Kafka](https://kafka.apache.org/) and [Spark](https://spark.apache.org/) to handle streaming submissions of urls.
 
-# Overview
+# design
+
+![design](design.drawio.png)
+created using [design file](design.drawio.xml) on [diagrams.net](https://app.diagrams.net/)
 
 # local Kafka
 

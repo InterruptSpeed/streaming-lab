@@ -39,7 +39,7 @@ python3 http_kafka_proxy.py
 ```
 + and in yet another terminal run:
 ```
-curl --data "url=https://github.com/" localhost:5000/topic
+curl --header "Content-Type: application/json" --request POST --data '{"url":"https://github.com/"}' localhost:5000/topic
 ```
 
 
